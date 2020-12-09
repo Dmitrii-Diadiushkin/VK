@@ -10,10 +10,9 @@ import WebKit
 
 class LoginViewController: UIViewController {
     
-    private lazy var webView: WKWebView = {
+    private weak var webView: WKWebView! = {
         let webViewConfig = WKWebViewConfiguration()
         let webView = WKWebView(frame: .zero, configuration: webViewConfig)
-        webView.navigationDelegate = self
         webView.translatesAutoresizingMaskIntoConstraints = false
         return webView
     }()
@@ -42,6 +41,7 @@ class LoginViewController: UIViewController {
     }
     
     func setupUI() {
+        webView.navigationDelegate = self
         self.view.backgroundColor = .white
         self.view.addSubview(webView)
         NSLayoutConstraint.activate([

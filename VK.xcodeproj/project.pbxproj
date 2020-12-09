@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6D2FCC272580881F00A1715E /* LoginModuleBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */; };
+		6D2FCC4A2580A93500A1715E /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC482580A93500A1715E /* FriendsViewController.swift */; };
+		6D2FCC4B2580A93500A1715E /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D2FCC492580A93500A1715E /* FriendsViewController.xib */; };
+		6D2FCC522580AD7700A1715E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC512580AD7700A1715E /* TabBarViewController.swift */; };
+		6D2FCC572580AFCC00A1715E /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC562580AFCC00A1715E /* MyGroupsViewController.swift */; };
+		6D2FCC5C2580BA6800A1715E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC5B2580BA6800A1715E /* NewsViewController.swift */; };
 		6DC8DEA4258083C000760606 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC8DEA3258083C000760606 /* LoginPresenter.swift */; };
 		6DDAD933257E3DB0003E4AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDAD932257E3DB0003E4AB2 /* AppDelegate.swift */; };
 		6DDAD935257E3DB0003E4AB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDAD934257E3DB0003E4AB2 /* SceneDelegate.swift */; };
@@ -19,6 +24,11 @@
 
 /* Begin PBXFileReference section */
 		6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleBulder.swift; sourceTree = "<group>"; };
+		6D2FCC482580A93500A1715E /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		6D2FCC492580A93500A1715E /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
+		6D2FCC512580AD7700A1715E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6D2FCC562580AFCC00A1715E /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
+		6D2FCC5B2580BA6800A1715E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		6DC8DEA3258083C000760606 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		6DDAD92F257E3DB0003E4AB2 /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDAD932257E3DB0003E4AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +66,63 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6D2FCC312580A2D700A1715E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FCC512580AD7700A1715E /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6D2FCC352580A46B00A1715E /* FriendsTab */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FCC402580A4AB00A1715E /* View */,
+			);
+			path = FriendsTab;
+			sourceTree = "<group>";
+		};
+		6D2FCC402580A4AB00A1715E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FCC482580A93500A1715E /* FriendsViewController.swift */,
+				6D2FCC492580A93500A1715E /* FriendsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D2FCC542580AF9200A1715E /* GroupsTab */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FCC552580AFA200A1715E /* View */,
+			);
+			path = GroupsTab;
+			sourceTree = "<group>";
+		};
+		6D2FCC552580AFA200A1715E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FCC562580AFCC00A1715E /* MyGroupsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D2FCC592580BA4400A1715E /* NewsBar */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FCC5A2580BA5200A1715E /* View */,
+			);
+			path = NewsBar;
+			sourceTree = "<group>";
+		};
+		6D2FCC5A2580BA5200A1715E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D2FCC5B2580BA6800A1715E /* NewsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6DC8DEA12580839A00760606 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +158,15 @@
 		6DDAD931257E3DB0003E4AB2 /* VK */ = {
 			isa = PBXGroup;
 			children = (
-				6D2FCC2A25808D9600A1715E /* Models */,
+				6D2FCC312580A2D700A1715E /* TabBar */,
+				6D2FCC352580A46B00A1715E /* FriendsTab */,
+				6D2FCC542580AF9200A1715E /* GroupsTab */,
+				6D2FCC592580BA4400A1715E /* NewsBar */,
 				6DDAD94F257E4265003E4AB2 /* LoginScreen */,
 				6DDAD94E257E412D003E4AB2 /* Storyboards */,
-				6DDAD948257E4068003E4AB2 /* SwiftDelegates */,
+				6D2FCC2A25808D9600A1715E /* Models */,
 				6DDAD947257E4051003E4AB2 /* Utilities */,
+				6DDAD948257E4068003E4AB2 /* SwiftDelegates */,
 				6DDAD93B257E3DB0003E4AB2 /* Assets.xcassets */,
 				6DDAD940257E3DB0003E4AB2 /* Info.plist */,
 			);
@@ -196,6 +267,7 @@
 			files = (
 				6DDAD93F257E3DB0003E4AB2 /* LaunchScreen.storyboard in Resources */,
 				6DDAD93C257E3DB0003E4AB2 /* Assets.xcassets in Resources */,
+				6D2FCC4B2580A93500A1715E /* FriendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2FCC522580AD7700A1715E /* TabBarViewController.swift in Sources */,
+				6D2FCC4A2580A93500A1715E /* FriendsViewController.swift in Sources */,
 				6DDAD951257E42E0003E4AB2 /* LoginViewController.swift in Sources */,
+				6D2FCC5C2580BA6800A1715E /* NewsViewController.swift in Sources */,
 				6D2FCC272580881F00A1715E /* LoginModuleBulder.swift in Sources */,
 				6DDAD933257E3DB0003E4AB2 /* AppDelegate.swift in Sources */,
 				6DDAD935257E3DB0003E4AB2 /* SceneDelegate.swift in Sources */,
+				6D2FCC572580AFCC00A1715E /* MyGroupsViewController.swift in Sources */,
 				6DDAD94A257E4089003E4AB2 /* VKSession.swift in Sources */,
 				6DC8DEA4258083C000760606 /* LoginPresenter.swift in Sources */,
 			);
