@@ -13,7 +13,7 @@ protocol LoginViewInput {
 }
 
 protocol LoginViewOutput {
-    func serverResponce(responce: WKNavigationResponse)
+    func serverResponce(responce: WKNavigationResponse, completion: (Bool) -> Void)
 }
 
 final class LoginPresenter {
@@ -23,13 +23,12 @@ final class LoginPresenter {
 }
 
 extension LoginPresenter: LoginViewOutput {
-    func serverResponce(responce: WKNavigationResponse) {
+    func serverResponce(responce: WKNavigationResponse, completion: (Bool) -> Void) {
         guard let url = responce.response.url,
               url.path == "/blank.html",
               let fragment = url.fragment
         else {
-            self.viewInput?.showError(error: "Response is corrupted")
-            print("Response is corrupted")
+            completion(false)
             return
         }
         
@@ -44,8 +43,7 @@ extension LoginPresenter: LoginViewOutput {
         guard let token = parameters["access_token"],
               let userIdString = parameters["user_id"],
               let userId = Int(userIdString) else {
-            self.viewInput?.showError(error: "Response is corrupted")
-            print("Response is corrupted")
+            completion(false)
             return
         }
         
@@ -56,6 +54,7 @@ extension LoginPresenter: LoginViewOutput {
         tabBar.modalPresentationStyle = .fullScreen
         self.viewInput?.present(tabBar, animated: true, completion: nil)
         print("Show TabBar")
+        completion(true)
     }
     
 }

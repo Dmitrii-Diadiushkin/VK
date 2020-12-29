@@ -10,6 +10,7 @@ import WebKit
 
 class LoginViewController: UIViewController {
     
+    //MARK: - Declaration
     private weak var webView: WKWebView! = {
         let webViewConfig = WKWebViewConfiguration()
         let webView = WKWebView(frame: .zero, configuration: webViewConfig)
@@ -19,6 +20,7 @@ class LoginViewController: UIViewController {
     
     private let presenter: LoginViewOutput
     
+    //MARK: - Initializations
     init(presenter: LoginViewOutput) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -28,6 +30,7 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Lifetime funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,10 +40,12 @@ class LoginViewController: UIViewController {
             print("Request error")
             return
         }
+        print("Request \(request)")
         webView.load(request)
     }
     
-    func setupUI() {
+    //MARK: - Funcs
+    private func setupUI() {
         webView.navigationDelegate = self
         self.view.backgroundColor = .white
         self.view.addSubview(webView)
@@ -53,7 +58,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    func createURLRequest() -> URLRequest? {
+    private func createURLRequest() -> URLRequest? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "oauth.vk.com"
@@ -75,19 +80,30 @@ class LoginViewController: UIViewController {
     }
 }
 
+    //MARK: - Extentions WebView
 extension LoginViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         
-        presenter.serverResponce(responce: navigationResponse)
-        decisionHandler(.cancel)
+        presenter.serverResponce(responce: navigationResponse) { completion in
+            switch completion {
+            case true:
+                decisionHandler(.cancel)
+            case false:
+                decisionHandler(.allow)
+            }
+        }
+        
     }
 }
-
+    
+    //MARK: - Extention Input Protocol
 extension LoginViewController: LoginViewInput {
     func showError(error: String) {
+        
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         let actionOK = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(actionOK)
         self.present(alert, animated: true, completion: nil)
+        
     }
 }

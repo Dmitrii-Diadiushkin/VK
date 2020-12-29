@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsViewController" customModule="VK" customModuleProvider="target">
             <connections>
-                <outlet property="testLabel" destination="YsL-hC-LzR" id="qbn-lK-SUu"/>
+                <outlet property="tableView" destination="YeP-yg-sGf" id="Su7-Z5-WFm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsL-hC-LzR">
-                    <rect key="frame" x="179" y="442.5" width="56.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YeP-yg-sGf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="YsL-hC-LzR" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Y72-TP-Xdd"/>
-                <constraint firstItem="YsL-hC-LzR" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="prL-sz-QEn"/>
+                <constraint firstItem="YeP-yg-sGf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5vw-61-aIA"/>
+                <constraint firstItem="YeP-yg-sGf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AUE-hv-nU9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YeP-yg-sGf" secondAttribute="trailing" id="c6S-29-RWD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YeP-yg-sGf" secondAttribute="bottom" id="r00-vC-nJs"/>
             </constraints>
             <point key="canvasLocation" x="-306" y="134"/>
         </view>
