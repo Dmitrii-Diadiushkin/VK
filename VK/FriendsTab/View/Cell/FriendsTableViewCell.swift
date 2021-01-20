@@ -9,6 +9,10 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
 
+    @IBOutlet private weak var avatarImage: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +24,9 @@ class FriendsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setUp(friend: FriendsVM) {
+        let image = try? Data(contentsOf: URL(string: friend.photo)!)
+        self.avatarImage.image = UIImage(data: image!)
+        self.nameLabel.text = friend.name
+    }
 }

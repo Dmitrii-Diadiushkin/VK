@@ -40,7 +40,6 @@ class LoginViewController: UIViewController {
             print("Request error")
             return
         }
-        print("Request \(request)")
         webView.load(request)
     }
     

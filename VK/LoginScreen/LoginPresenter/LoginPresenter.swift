@@ -47,6 +47,7 @@ extension LoginPresenter: LoginViewOutput {
             return
         }
         
+        print(token)
         VKSession.shared.token = token
         VKSession.shared.userID = userId
         

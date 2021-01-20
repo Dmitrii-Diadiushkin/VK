@@ -13,6 +13,8 @@ class FriendsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let presenter: FriendsPresenter
+    private var friendsIndexes = [String]()
+    private var friendsToShow = [[FriendsVM]]()
     
     //MARK: - Initializations
     init(presenter: FriendsPresenter) {
@@ -28,12 +30,15 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        presenter.needDataToShow()
     }
     
     //MARK: - Funcs
     private func setupUI() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "FriendsTableViewCell", bundle: nil), forCellReuseIdentifier: "FriendCell")
         tableView.tableFooterView = UIView()
     }
 }
@@ -44,17 +49,41 @@ extension FriendsViewController: UITableViewDelegate {
 }
 
 extension FriendsViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return friendsIndexes.count
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return friendsIndexes
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return friendsIndexes[section]
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return friendsToShow[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendsTableViewCell
+        
+        let friendToShow = friendsToShow[indexPath.section][indexPath.row]
+        
+        cell.setUp(friend: friendToShow)
+        
+        return cell
     }
 }
 
     //MARK: - Extention Input Protocol
 extension FriendsViewController: FriendsViewInput {
+    func showData(indexes: [String], friends: [[FriendsVM]]) {
+        friendsIndexes = indexes
+        friendsToShow = friends
+        tableView.reloadData()
+    }
     
 }
