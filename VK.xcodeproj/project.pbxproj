@@ -19,6 +19,7 @@
 		6D3995EA259B1A68002292BC /* FriendsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3995E9259B1A68002292BC /* FriendsModuleBuilder.swift */; };
 		6D3995EE259B372B002292BC /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3995ED259B372B002292BC /* Friends.swift */; };
 		6D3995F3259B3F9E002292BC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3995F2259B3F9E002292BC /* NetworkManager.swift */; };
+		6D9A897B25B81157000B12D9 /* CircleAvatarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A897A25B81157000B12D9 /* CircleAvatarShadow.swift */; };
 		6DC8DEA4258083C000760606 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC8DEA3258083C000760606 /* LoginPresenter.swift */; };
 		6DCCCC4125A6DE0200D1A9FA /* FriendsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCCC4025A6DE0200D1A9FA /* FriendsVM.swift */; };
 		6DDAD933257E3DB0003E4AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDAD932257E3DB0003E4AB2 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 		6D3995E9259B1A68002292BC /* FriendsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModuleBuilder.swift; sourceTree = "<group>"; };
 		6D3995ED259B372B002292BC /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		6D3995F2259B3F9E002292BC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6D9A897A25B81157000B12D9 /* CircleAvatarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatarShadow.swift; sourceTree = "<group>"; };
 		6DC8DEA3258083C000760606 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		6DCCCC4025A6DE0200D1A9FA /* FriendsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVM.swift; sourceTree = "<group>"; };
 		6DDAD92F257E3DB0003E4AB2 /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,14 @@
 			path = Friends;
 			sourceTree = "<group>";
 		};
+		6D9A897925B810D5000B12D9 /* Custom controls */ = {
+			isa = PBXGroup;
+			children = (
+				6D9A897A25B81157000B12D9 /* CircleAvatarShadow.swift */,
+			);
+			path = "Custom controls";
+			sourceTree = "<group>";
+		};
 		6DC8DEA12580839A00760606 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +228,7 @@
 		6DDAD931257E3DB0003E4AB2 /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				6D9A897925B810D5000B12D9 /* Custom controls */,
 				6DDAD94F257E4265003E4AB2 /* LoginScreen */,
 				6D2FCC312580A2D700A1715E /* TabBar */,
 				6D2FCC352580A46B00A1715E /* FriendsTab */,
@@ -344,6 +355,7 @@
 				6D3995EE259B372B002292BC /* Friends.swift in Sources */,
 				6D2FCC522580AD7700A1715E /* TabBarViewController.swift in Sources */,
 				6D2FCC4A2580A93500A1715E /* FriendsViewController.swift in Sources */,
+				6D9A897B25B81157000B12D9 /* CircleAvatarShadow.swift in Sources */,
 				6D2FCC6E25813A0F00A1715E /* FriendsTableViewCell.swift in Sources */,
 				6DDAD951257E42E0003E4AB2 /* LoginViewController.swift in Sources */,
 				6D2FCC5C2580BA6800A1715E /* NewsViewController.swift in Sources */,

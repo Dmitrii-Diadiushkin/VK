@@ -59,7 +59,7 @@ extension FriendsPresenter: FriendsViewOutput {
                 }
                 
             case .failure(_):
-                print("Data error")
+                print("Data error tra-lala")
             }
         }
     }

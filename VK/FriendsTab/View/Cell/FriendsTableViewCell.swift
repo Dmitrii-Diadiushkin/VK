@@ -9,8 +9,8 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var avatarImage: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var avatarImage: CircleAvatarShadow!
     
     
     override func awakeFromNib() {
@@ -26,7 +26,7 @@ class FriendsTableViewCell: UITableViewCell {
     
     func setUp(friend: FriendsVM) {
         let image = try? Data(contentsOf: URL(string: friend.photo)!)
-        self.avatarImage.image = UIImage(data: image!)
+        self.avatarImage.avatarImage.image = UIImage(data: image!)
         self.nameLabel.text = friend.name
     }
 }
