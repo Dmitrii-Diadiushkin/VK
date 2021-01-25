@@ -41,6 +41,7 @@ final class FriendsPresenter {
                 friendsToShow.append(friendForKey)
             }
         }
+        
         return (friendsIndexes, friendsToShow)
     }
 }
