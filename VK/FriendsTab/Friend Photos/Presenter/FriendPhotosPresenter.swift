@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+protocol FriendPhotosViewInput {
+    
+}
+
+protocol FriendPhotosViewOutput {
+    
+}
+
+final class FriendPhotosPresenter {
+    
+}
+
+extension FriendPhotosPresenter: FriendPhotosViewOutput {
+    
+}

@@ -19,8 +19,8 @@ protocol FriendsViewOutput {
 final class FriendsPresenter {
     
     weak var viewInput: (UIViewController & FriendsViewInput)?
-    let networkManager = NetworkManager.shared
-    
+    private let networkManager = NetworkManager.shared
+    private var friendsToShow = [[FriendsVM]]()
    
     private func prepateDataToShow(friends: Friends) -> (friendsIndexes: [String], friendsToShow: [[FriendsVM]]) {
         var baseFriends = [FriendsVM]()
@@ -34,7 +34,7 @@ final class FriendsPresenter {
         }
         
         let friendsIndexes = friendsDict.keys.sorted()
-        var friendsToShow = [[FriendsVM]]()
+        friendsToShow = [[FriendsVM]]()
         
         friendsIndexes.forEach { key in
             if let friendForKey = friendsDict[key] {
@@ -60,7 +60,7 @@ extension FriendsPresenter: FriendsViewOutput {
                 }
                 
             case .failure(_):
-                print("Data error tra-lala")
+                print("Data error")
             }
         }
     }
