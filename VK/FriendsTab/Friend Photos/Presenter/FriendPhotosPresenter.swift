@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol FriendPhotosViewInput {
     
@@ -16,7 +17,7 @@ protocol FriendPhotosViewOutput {
 }
 
 final class FriendPhotosPresenter {
-    
+    weak var viewInput: (UIViewController & FriendPhotosViewInput)?
 }
 
 extension FriendPhotosPresenter: FriendPhotosViewOutput {

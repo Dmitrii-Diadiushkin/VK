@@ -14,6 +14,7 @@ protocol FriendsViewInput {
 
 protocol FriendsViewOutput {
     func needDataToShow()
+    func rowSelected()
 }
 
 final class FriendsPresenter {
@@ -63,6 +64,12 @@ extension FriendsPresenter: FriendsViewOutput {
                 print("Data error")
             }
         }
+    }
+    
+    func rowSelected() {
+        let viewController = FriendPhotosBuilder.build()
+        viewController.title = "Friend Photos"
+        self.viewInput?.navigationController?.pushViewController(viewController, animated: true)
     }
     
 }
