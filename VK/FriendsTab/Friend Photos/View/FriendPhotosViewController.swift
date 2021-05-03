@@ -13,6 +13,7 @@ class FriendPhotosViewController: UIViewController {
     private var collectionView: UICollectionView?
     
     private let presenter: FriendPhotosPresenter
+    private var albumsForView = [AlbumsVM]()
     
     //MARK: - Initialization
     init(presenter: FriendPhotosPresenter) {
@@ -27,7 +28,7 @@ class FriendPhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
+        presenter.needDataToShow()
     }
 
     //MARK: - Functions
@@ -55,12 +56,13 @@ class FriendPhotosViewController: UIViewController {
 
 extension FriendPhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        print("Items: \(albumsForView.count)")
+        return albumsForView.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendPhotosCollectionViewCell
-        cell.setupCell()
+        cell.setupCell(albumToShow: albumsForView[indexPath.row])
         return cell
     }
     
@@ -73,5 +75,10 @@ extension FriendPhotosViewController: UICollectionViewDelegate {
 
 //MARK: - Extention Input Protocol
 extension FriendPhotosViewController: FriendPhotosViewInput {
+    func showAlbums(albumsToShow: [AlbumsVM]) {
+        albumsForView = albumsToShow
+        print("Update CollectionView")
+        collectionView?.reloadData()
+    }
     
 }

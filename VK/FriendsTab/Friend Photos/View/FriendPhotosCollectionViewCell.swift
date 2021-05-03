@@ -14,7 +14,7 @@ class FriendPhotosCollectionViewCell: UICollectionViewCell {
         return photoImage
     }()
     
-    func setupCell() {
+    func setupCell(albumToShow: AlbumsVM) {
         self.contentView.addSubview(photoImage)
         
         NSLayoutConstraint.activate([
@@ -23,7 +23,10 @@ class FriendPhotosCollectionViewCell: UICollectionViewCell {
             photoImage.topAnchor.constraint(equalTo: contentView.topAnchor),
             photoImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
-        
-        photoImage.image = UIImage(systemName: "house.fill")
+        let image = try? Data(contentsOf: URL(string: albumToShow.thumb)!)
+        guard let thumb = image else {
+            return photoImage.image = UIImage(systemName: "house.fill")
+        }
+        photoImage.image = UIImage(data: thumb)
     }
 }

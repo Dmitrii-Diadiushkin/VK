@@ -14,14 +14,13 @@ protocol FriendsViewInput {
 
 protocol FriendsViewOutput {
     func needDataToShow()
-    func rowSelected()
+    func rowSelected(friendID: Int)
 }
 
 final class FriendsPresenter {
     
     weak var viewInput: (UIViewController & FriendsViewInput)?
     private let networkManager = NetworkManager.shared
-    private var friendsToShow = [[FriendsVM]]()
    
     private func prepateDataToShow(friends: Friends) -> (friendsIndexes: [String], friendsToShow: [[FriendsVM]]) {
         var baseFriends = [FriendsVM]()
@@ -35,7 +34,7 @@ final class FriendsPresenter {
         }
         
         let friendsIndexes = friendsDict.keys.sorted()
-        friendsToShow = [[FriendsVM]]()
+        var friendsToShow = [[FriendsVM]]()
         
         friendsIndexes.forEach { key in
             if let friendForKey = friendsDict[key] {
@@ -66,8 +65,8 @@ extension FriendsPresenter: FriendsViewOutput {
         }
     }
     
-    func rowSelected() {
-        let viewController = FriendPhotosBuilder.build()
+    func rowSelected(friendID: Int) {
+        let viewController = FriendPhotosBuilder.build(selectedFriendID: friendID)
         viewController.title = "Friend Photos"
         self.viewInput?.navigationController?.pushViewController(viewController, animated: true)
     }

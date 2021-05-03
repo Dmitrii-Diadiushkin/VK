@@ -54,7 +54,6 @@ extension LoginPresenter: LoginViewOutput {
         let tabBar = TabBarViewController()
         tabBar.modalPresentationStyle = .fullScreen
         self.viewInput?.present(tabBar, animated: true, completion: nil)
-        print("Show TabBar")
         completion(true)
     }
     

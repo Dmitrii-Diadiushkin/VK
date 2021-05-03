@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D27861F26406A190042887E /* FriendsAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27861E26406A190042887E /* FriendsAlbums.swift */; };
+		6D27862326407A1F0042887E /* AlbumsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27862226407A1F0042887E /* AlbumsVM.swift */; };
 		6D2FCC272580881F00A1715E /* LoginModuleBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */; };
 		6D2FCC4A2580A93500A1715E /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC482580A93500A1715E /* FriendsViewController.swift */; };
 		6D2FCC4B2580A93500A1715E /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D2FCC492580A93500A1715E /* FriendsViewController.xib */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D27861E26406A190042887E /* FriendsAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAlbums.swift; sourceTree = "<group>"; };
+		6D27862226407A1F0042887E /* AlbumsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsVM.swift; sourceTree = "<group>"; };
 		6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleBulder.swift; sourceTree = "<group>"; };
 		6D2FCC482580A93500A1715E /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		6D2FCC492580A93500A1715E /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				6D3995ED259B372B002292BC /* Friends.swift */,
+				6D27861E26406A190042887E /* FriendsAlbums.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				6DCCCC4025A6DE0200D1A9FA /* FriendsVM.swift */,
+				6D27862226407A1F0042887E /* AlbumsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -406,10 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D27862326407A1F0042887E /* AlbumsVM.swift in Sources */,
 				6D2FCC69258134E200A1715E /* FriendsPresenter.swift in Sources */,
 				6D3995EE259B372B002292BC /* Friends.swift in Sources */,
 				6D9A898C25BF4376000B12D9 /* FriendPhotosViewController.swift in Sources */,
 				6D2FCC522580AD7700A1715E /* TabBarViewController.swift in Sources */,
+				6D27861F26406A190042887E /* FriendsAlbums.swift in Sources */,
 				6D2FCC4A2580A93500A1715E /* FriendsViewController.swift in Sources */,
 				6D9A897B25B81157000B12D9 /* CircleAvatarShadow.swift in Sources */,
 				6D2FCC6E25813A0F00A1715E /* FriendsTableViewCell.swift in Sources */,

@@ -46,7 +46,9 @@ class FriendsViewController: UIViewController {
     //MARK: - Extentions TableView
 extension FriendsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.rowSelected()
+        let selectedFriendID = friendsToShow[indexPath.section][indexPath.row].id
+        print("Selected friendID: \(selectedFriendID)")
+        presenter.rowSelected(friendID: selectedFriendID)
     }
 }
 
