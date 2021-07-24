@@ -90,7 +90,6 @@ final class NetworkManager {
             print("URL Error!")
             return
         }
-        print(url)
         let task = session.dataTask(with: url) { (data, response, error) in
             guard let recievedData = data else { return }
             do {

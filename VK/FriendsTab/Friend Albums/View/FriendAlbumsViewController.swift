@@ -7,16 +7,16 @@
 
 import UIKit
 
-class FriendPhotosViewController: UIViewController {
+class FriendAlbumsViewController: UIViewController {
 
     //MARK: - Declaration
     private var collectionView: UICollectionView?
     
-    private let presenter: FriendPhotosPresenter
+    private let presenter: FriendAlbumsPresenter
     private var albumsForView = [AlbumsVM]()
     
     //MARK: - Initialization
-    init(presenter: FriendPhotosPresenter) {
+    init(presenter: FriendAlbumsPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,7 +43,7 @@ class FriendPhotosViewController: UIViewController {
         collectionViewLayout.scrollDirection = .vertical
 
         collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: collectionViewLayout)
-        collectionView?.register(FriendPhotosCollectionViewCell.self, forCellWithReuseIdentifier: "FriendPhotoCell")
+        collectionView?.register(FriendAlbumsCollectionViewCell.self, forCellWithReuseIdentifier: "FriendPhotoCell")
         collectionView?.backgroundColor = .white
         collectionView?.delegate = self
         collectionView?.dataSource = self
@@ -54,14 +54,14 @@ class FriendPhotosViewController: UIViewController {
 
 //MARK: - Extentions CollectionView
 
-extension FriendPhotosViewController: UICollectionViewDataSource {
+extension FriendAlbumsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("Items: \(albumsForView.count)")
         return albumsForView.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendPhotosCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendAlbumsCollectionViewCell
         cell.setupCell(albumToShow: albumsForView[indexPath.row])
         return cell
     }
@@ -69,12 +69,12 @@ extension FriendPhotosViewController: UICollectionViewDataSource {
     
 }
 
-extension FriendPhotosViewController: UICollectionViewDelegate {
+extension FriendAlbumsViewController: UICollectionViewDelegate {
     
 }
 
 //MARK: - Extention Input Protocol
-extension FriendPhotosViewController: FriendPhotosViewInput {
+extension FriendAlbumsViewController: FriendAlbumsViewInput {
     func showAlbums(albumsToShow: [AlbumsVM]) {
         albumsForView = albumsToShow
         print("Update CollectionView")

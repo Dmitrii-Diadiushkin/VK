@@ -8,17 +8,17 @@
 import Foundation
 import UIKit
 
-protocol FriendPhotosViewInput {
+protocol FriendAlbumsViewInput {
     func showAlbums(albumsToShow: [AlbumsVM])
 }
 
-protocol FriendPhotosViewOutput {
+protocol FriendAlbumsViewOutput {
     func needDataToShow()
 }
 
-final class FriendPhotosPresenter {
+final class FriendAlbumsPresenter {
     
-    weak var viewInput: (UIViewController & FriendPhotosViewInput)?
+    weak var viewInput: (UIViewController & FriendAlbumsViewInput)?
     private let friendID: Int
     private let networkManager = NetworkManager.shared
     
@@ -36,7 +36,7 @@ final class FriendPhotosPresenter {
     }
 }
 
-extension FriendPhotosPresenter: FriendPhotosViewOutput {
+extension FriendAlbumsPresenter: FriendAlbumsViewOutput {
     
     func needDataToShow() {
         networkManager.getFriendAlbums(friendID: friendID) { [weak self] result in

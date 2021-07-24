@@ -25,7 +25,6 @@ struct FriendsAlbums: Decodable {
         let items = try responce.nestedContainer(keyedBy: NestedCodingKeys.self, forKey: .response)
         
         self.albums = try items.decode([Album].self, forKey: .items)
-        print("Step 1")
         self.count = try items.decode(Int.self, forKey: .count)
     }
 }

@@ -66,7 +66,7 @@ extension FriendsPresenter: FriendsViewOutput {
     }
     
     func rowSelected(friendID: Int) {
-        let viewController = FriendPhotosBuilder.build(selectedFriendID: friendID)
+        let viewController = FriendAlbumsBuilder.build(selectedFriendID: friendID)
         viewController.title = "Friend Photos"
         self.viewInput?.navigationController?.pushViewController(viewController, animated: true)
     }
