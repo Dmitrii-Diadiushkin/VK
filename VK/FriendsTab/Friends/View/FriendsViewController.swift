@@ -26,7 +26,7 @@ class FriendsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Lifetime funcs
+    //MARK: - Lifetime functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -45,7 +45,10 @@ class FriendsViewController: UIViewController {
 
     //MARK: - Extentions TableView
 extension FriendsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedFriendID = friendsToShow[indexPath.section][indexPath.row].id
+        presenter.rowSelected(friendID: selectedFriendID)
+    }
 }
 
 extension FriendsViewController: UITableViewDataSource {

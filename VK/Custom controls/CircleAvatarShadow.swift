@@ -36,7 +36,6 @@ class CircleAvatarShadow: UIView {
         setupView()
     }
     
-    
     func setupView(){
         
         avatarImage.frame = self.layer.bounds

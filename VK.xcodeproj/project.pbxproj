@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D1F18BC26AC7A32007B4F26 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F18BB26AC7A32007B4F26 /* PhotosPresenter.swift */; };
+		6D1F18BF26AC7A71007B4F26 /* PhotosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F18BE26AC7A71007B4F26 /* PhotosBuilder.swift */; };
+		6D27861F26406A190042887E /* FriendsAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27861E26406A190042887E /* FriendsAlbums.swift */; };
+		6D27862326407A1F0042887E /* AlbumsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27862226407A1F0042887E /* AlbumsVM.swift */; };
 		6D2FCC272580881F00A1715E /* LoginModuleBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */; };
 		6D2FCC4A2580A93500A1715E /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC482580A93500A1715E /* FriendsViewController.swift */; };
 		6D2FCC4B2580A93500A1715E /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D2FCC492580A93500A1715E /* FriendsViewController.xib */; };
@@ -21,6 +25,10 @@
 		6D3995F3259B3F9E002292BC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3995F2259B3F9E002292BC /* NetworkManager.swift */; };
 		6D9A897B25B81157000B12D9 /* CircleAvatarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A897A25B81157000B12D9 /* CircleAvatarShadow.swift */; };
 		6D9A898425BF4290000B12D9 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A898325BF4290000B12D9 /* CacheManager.swift */; };
+		6D9A898C25BF4376000B12D9 /* FriendAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A898B25BF4376000B12D9 /* FriendAlbumsViewController.swift */; };
+		6D9A899425BF43A8000B12D9 /* FriendAlbumsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A899325BF43A8000B12D9 /* FriendAlbumsPresenter.swift */; };
+		6D9A899825BF43BF000B12D9 /* FriendAlbumsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A899725BF43BF000B12D9 /* FriendAlbumsBuilder.swift */; };
+		6DC7CAD725C86662000E0558 /* FriendAlbumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7CAD625C86662000E0558 /* FriendAlbumsCollectionViewCell.swift */; };
 		6DC8DEA4258083C000760606 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC8DEA3258083C000760606 /* LoginPresenter.swift */; };
 		6DCCCC4125A6DE0200D1A9FA /* FriendsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCCC4025A6DE0200D1A9FA /* FriendsVM.swift */; };
 		6DDAD933257E3DB0003E4AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDAD932257E3DB0003E4AB2 /* AppDelegate.swift */; };
@@ -32,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D1F18BB26AC7A32007B4F26 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
+		6D1F18BE26AC7A71007B4F26 /* PhotosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosBuilder.swift; sourceTree = "<group>"; };
+		6D27861E26406A190042887E /* FriendsAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAlbums.swift; sourceTree = "<group>"; };
+		6D27862226407A1F0042887E /* AlbumsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsVM.swift; sourceTree = "<group>"; };
 		6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleBulder.swift; sourceTree = "<group>"; };
 		6D2FCC482580A93500A1715E /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		6D2FCC492580A93500A1715E /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
@@ -46,6 +58,10 @@
 		6D3995F2259B3F9E002292BC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6D9A897A25B81157000B12D9 /* CircleAvatarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatarShadow.swift; sourceTree = "<group>"; };
 		6D9A898325BF4290000B12D9 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		6D9A898B25BF4376000B12D9 /* FriendAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAlbumsViewController.swift; sourceTree = "<group>"; };
+		6D9A899325BF43A8000B12D9 /* FriendAlbumsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAlbumsPresenter.swift; sourceTree = "<group>"; };
+		6D9A899725BF43BF000B12D9 /* FriendAlbumsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAlbumsBuilder.swift; sourceTree = "<group>"; };
+		6DC7CAD625C86662000E0558 /* FriendAlbumsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAlbumsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6DC8DEA3258083C000760606 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		6DCCCC4025A6DE0200D1A9FA /* FriendsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVM.swift; sourceTree = "<group>"; };
 		6DDAD92F257E3DB0003E4AB2 /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D1F18B826AC79B5007B4F26 /* Photos in Album */ = {
+			isa = PBXGroup;
+			children = (
+				6D1F18B926AC7A0C007B4F26 /* View */,
+				6D1F18BB26AC7A32007B4F26 /* PhotosPresenter.swift */,
+				6D1F18BE26AC7A71007B4F26 /* PhotosBuilder.swift */,
+			);
+			path = "Photos in Album";
+			sourceTree = "<group>";
+		};
+		6D1F18B926AC7A0C007B4F26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6D2FCC252580880800A1715E /* Builder */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +130,9 @@
 		6D2FCC352580A46B00A1715E /* FriendsTab */ = {
 			isa = PBXGroup;
 			children = (
-				6D3995E8259B1A49002292BC /* Builder */,
-				6D2FCC67258134CC00A1715E /* Presenter */,
-				6D2FCC402580A4AB00A1715E /* View */,
+				6D1F18B826AC79B5007B4F26 /* Photos in Album */,
+				6D9A898725BF4336000B12D9 /* Friend Albums */,
+				6D9A898625BF4328000B12D9 /* Friends */,
 			);
 			path = FriendsTab;
 			sourceTree = "<group>";
@@ -175,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				6D3995ED259B372B002292BC /* Friends.swift */,
+				6D27861E26406A190042887E /* FriendsAlbums.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -185,6 +219,51 @@
 				6D9A897A25B81157000B12D9 /* CircleAvatarShadow.swift */,
 			);
 			path = "Custom controls";
+			sourceTree = "<group>";
+		};
+		6D9A898625BF4328000B12D9 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				6D3995E8259B1A49002292BC /* Builder */,
+				6D2FCC67258134CC00A1715E /* Presenter */,
+				6D2FCC402580A4AB00A1715E /* View */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		6D9A898725BF4336000B12D9 /* Friend Albums */ = {
+			isa = PBXGroup;
+			children = (
+				6D9A898A25BF435A000B12D9 /* View */,
+				6D9A898925BF434D000B12D9 /* Presenter */,
+				6D9A898825BF4341000B12D9 /* Builder */,
+			);
+			path = "Friend Albums";
+			sourceTree = "<group>";
+		};
+		6D9A898825BF4341000B12D9 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				6D9A899725BF43BF000B12D9 /* FriendAlbumsBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		6D9A898925BF434D000B12D9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6D9A899325BF43A8000B12D9 /* FriendAlbumsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6D9A898A25BF435A000B12D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D9A898B25BF4376000B12D9 /* FriendAlbumsViewController.swift */,
+				6DC7CAD625C86662000E0558 /* FriendAlbumsCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6DC8DEA12580839A00760606 /* View */ = {
@@ -207,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				6DCCCC4025A6DE0200D1A9FA /* FriendsVM.swift */,
+				6D27862226407A1F0042887E /* AlbumsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -354,9 +434,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D27862326407A1F0042887E /* AlbumsVM.swift in Sources */,
 				6D2FCC69258134E200A1715E /* FriendsPresenter.swift in Sources */,
 				6D3995EE259B372B002292BC /* Friends.swift in Sources */,
+				6D1F18BC26AC7A32007B4F26 /* PhotosPresenter.swift in Sources */,
+				6D9A898C25BF4376000B12D9 /* FriendAlbumsViewController.swift in Sources */,
 				6D2FCC522580AD7700A1715E /* TabBarViewController.swift in Sources */,
+				6D27861F26406A190042887E /* FriendsAlbums.swift in Sources */,
 				6D2FCC4A2580A93500A1715E /* FriendsViewController.swift in Sources */,
 				6D9A897B25B81157000B12D9 /* CircleAvatarShadow.swift in Sources */,
 				6D2FCC6E25813A0F00A1715E /* FriendsTableViewCell.swift in Sources */,
@@ -370,8 +454,12 @@
 				6DDAD935257E3DB0003E4AB2 /* SceneDelegate.swift in Sources */,
 				6D2FCC572580AFCC00A1715E /* MyGroupsViewController.swift in Sources */,
 				6D3995F3259B3F9E002292BC /* NetworkManager.swift in Sources */,
+				6D1F18BF26AC7A71007B4F26 /* PhotosBuilder.swift in Sources */,
 				6DDAD94A257E4089003E4AB2 /* VKSession.swift in Sources */,
 				6DC8DEA4258083C000760606 /* LoginPresenter.swift in Sources */,
+				6DC7CAD725C86662000E0558 /* FriendAlbumsCollectionViewCell.swift in Sources */,
+				6D9A899825BF43BF000B12D9 /* FriendAlbumsBuilder.swift in Sources */,
+				6D9A899425BF43A8000B12D9 /* FriendAlbumsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

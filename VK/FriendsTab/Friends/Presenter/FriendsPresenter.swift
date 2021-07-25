@@ -14,13 +14,13 @@ protocol FriendsViewInput {
 
 protocol FriendsViewOutput {
     func needDataToShow()
+    func rowSelected(friendID: Int)
 }
 
 final class FriendsPresenter {
     
     weak var viewInput: (UIViewController & FriendsViewInput)?
-    let networkManager = NetworkManager.shared
-    
+    private let networkManager = NetworkManager.shared
    
     private func prepateDataToShow(friends: Friends) -> (friendsIndexes: [String], friendsToShow: [[FriendsVM]]) {
         var baseFriends = [FriendsVM]()
@@ -60,9 +60,14 @@ extension FriendsPresenter: FriendsViewOutput {
                 }
                 
             case .failure(_):
-                print("Data error tra-lala")
+                print("Data error")
             }
         }
     }
     
+    func rowSelected(friendID: Int) {
+        let viewController = FriendAlbumsBuilder.build(selectedFriendID: friendID)
+        viewController.title = "Friend Photos"
+        self.viewInput?.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

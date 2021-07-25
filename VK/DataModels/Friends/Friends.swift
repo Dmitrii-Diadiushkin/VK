@@ -15,7 +15,6 @@ struct Friends: Decodable {
     }
 
     enum NestedCodingKeys: String, CodingKey {
-        case count
         case items
     }
 
