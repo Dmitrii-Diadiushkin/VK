@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D1F18BC26AC7A32007B4F26 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F18BB26AC7A32007B4F26 /* PhotosPresenter.swift */; };
+		6D1F18BF26AC7A71007B4F26 /* PhotosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F18BE26AC7A71007B4F26 /* PhotosBuilder.swift */; };
 		6D27861F26406A190042887E /* FriendsAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27861E26406A190042887E /* FriendsAlbums.swift */; };
 		6D27862326407A1F0042887E /* AlbumsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27862226407A1F0042887E /* AlbumsVM.swift */; };
 		6D2FCC272580881F00A1715E /* LoginModuleBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D1F18BB26AC7A32007B4F26 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
+		6D1F18BE26AC7A71007B4F26 /* PhotosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosBuilder.swift; sourceTree = "<group>"; };
 		6D27861E26406A190042887E /* FriendsAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAlbums.swift; sourceTree = "<group>"; };
 		6D27862226407A1F0042887E /* AlbumsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsVM.swift; sourceTree = "<group>"; };
 		6D2FCC262580881F00A1715E /* LoginModuleBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleBulder.swift; sourceTree = "<group>"; };
@@ -81,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D1F18B826AC79B5007B4F26 /* Photos in Album */ = {
+			isa = PBXGroup;
+			children = (
+				6D1F18B926AC7A0C007B4F26 /* View */,
+				6D1F18BB26AC7A32007B4F26 /* PhotosPresenter.swift */,
+				6D1F18BE26AC7A71007B4F26 /* PhotosBuilder.swift */,
+			);
+			path = "Photos in Album";
+			sourceTree = "<group>";
+		};
+		6D1F18B926AC7A0C007B4F26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6D2FCC252580880800A1715E /* Builder */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +130,7 @@
 		6D2FCC352580A46B00A1715E /* FriendsTab */ = {
 			isa = PBXGroup;
 			children = (
+				6D1F18B826AC79B5007B4F26 /* Photos in Album */,
 				6D9A898725BF4336000B12D9 /* Friend Albums */,
 				6D9A898625BF4328000B12D9 /* Friends */,
 			);
@@ -415,6 +437,7 @@
 				6D27862326407A1F0042887E /* AlbumsVM.swift in Sources */,
 				6D2FCC69258134E200A1715E /* FriendsPresenter.swift in Sources */,
 				6D3995EE259B372B002292BC /* Friends.swift in Sources */,
+				6D1F18BC26AC7A32007B4F26 /* PhotosPresenter.swift in Sources */,
 				6D9A898C25BF4376000B12D9 /* FriendAlbumsViewController.swift in Sources */,
 				6D2FCC522580AD7700A1715E /* TabBarViewController.swift in Sources */,
 				6D27861F26406A190042887E /* FriendsAlbums.swift in Sources */,
@@ -431,6 +454,7 @@
 				6DDAD935257E3DB0003E4AB2 /* SceneDelegate.swift in Sources */,
 				6D2FCC572580AFCC00A1715E /* MyGroupsViewController.swift in Sources */,
 				6D3995F3259B3F9E002292BC /* NetworkManager.swift in Sources */,
+				6D1F18BF26AC7A71007B4F26 /* PhotosBuilder.swift in Sources */,
 				6DDAD94A257E4089003E4AB2 /* VKSession.swift in Sources */,
 				6DC8DEA4258083C000760606 /* LoginPresenter.swift in Sources */,
 				6DC7CAD725C86662000E0558 /* FriendAlbumsCollectionViewCell.swift in Sources */,

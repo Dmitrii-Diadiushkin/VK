@@ -11,6 +11,7 @@ class FriendAlbumsCollectionViewCell: UICollectionViewCell {
     private lazy var albumImage: UIImageView = {
         let photoImage = UIImageView()
         photoImage.translatesAutoresizingMaskIntoConstraints = false
+        photoImage.contentMode = .scaleAspectFit
         return photoImage
     }()
     

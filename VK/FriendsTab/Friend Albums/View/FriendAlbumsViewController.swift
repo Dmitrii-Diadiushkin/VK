@@ -24,7 +24,9 @@ class FriendAlbumsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     //MARK: - Lifetime functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -56,7 +58,6 @@ class FriendAlbumsViewController: UIViewController {
 
 extension FriendAlbumsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("Items: \(albumsForView.count)")
         return albumsForView.count
     }
     
@@ -66,18 +67,20 @@ extension FriendAlbumsViewController: UICollectionViewDataSource {
         return cell
     }
     
-    
 }
 
 extension FriendAlbumsViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        print(albumsForView[indexPath.row].id)
+    }
 }
 
 //MARK: - Extention Input Protocol
+
 extension FriendAlbumsViewController: FriendAlbumsViewInput {
     func showAlbums(albumsToShow: [AlbumsVM]) {
         albumsForView = albumsToShow
-        print("Update CollectionView")
         collectionView?.reloadData()
     }
     

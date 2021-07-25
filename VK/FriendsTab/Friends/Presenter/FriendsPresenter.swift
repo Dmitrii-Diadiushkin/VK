@@ -70,5 +70,4 @@ extension FriendsPresenter: FriendsViewOutput {
         viewController.title = "Friend Photos"
         self.viewInput?.navigationController?.pushViewController(viewController, animated: true)
     }
-    
 }
